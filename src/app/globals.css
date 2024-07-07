@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --primary-colour-100: 279, 92%, 90%;
+        --primary-colour-200: 279, 92%, 80%;
+        --primary-colour-300: 279, 92%, 70%;
+        --primary-colour-nav: 289, 92%, 30%;
+        --primary-colour-500: 279, 92%, 50%;
+        --primary-colour-600: 279, 92%, 40%;
+        --primary-colour-700: 279, 92%, 30%;
+        --primary-colour-800: 279, 92%, 20%;
+        --primary-colour-900: 279, 92%, 10%;
+
+        --secondary-colour-100: 329, 92%, 90%;
+        --secondary-colour-200: 329, 92%, 80%;
+        --secondary-colour-300: 329, 92%, 70%;
+        --secondary-colour-400: 329, 92%, 60%;
+        --secondary-colour-500: 329, 92%, 50%;
+        --secondary-colour-600: 329, 92%, 40%;
+        --secondary-colour-700: 329, 92%, 30%;
+        --secondary-colour-800: 329, 92%, 20%;
+        --secondary-colour-900: 329, 92%, 15%;
+
+        --neutral-colour-100: 0, 0%, 90%;
+        --neutral-colour-200: 0, 0%, 80%;
+        --neutral-colour-300: 0, 0%, 70%;
+        --neutral-colour-400: 0, 0%, 60%;
+        --neutral-colour-500: 0, 0%, 50%;
+        --neutral-colour-600: 0, 0%, 40%;
+        --neutral-colour-700: 0, 0%, 30%;
+        --neutral-colour-800: 0, 0%, 20%;
+        --neutral-colour-900: 0, 0%, 10%;
+
+        --success-colour-100: 131, 92%, 90%;
+        --success-colour-100: 131, 92%, 80%;
+        --success-colour-100: 131, 92%, 70%;
+        --success-colour-100: 131, 92%, 60%;
+        --success-colour-100: 131, 92%, 50%;
+        --success-colour-100: 131, 92%, 40%;
+        --success-colour-100: 131, 92%, 30%;
+        --success-colour-100: 131, 92%, 20%;
+        --success-colour-100: 131, 92%, 10%;
+
+        --error-colour-100: 359, 92%, 90%;
+        --error-colour-200: 359, 92%, 80%;
+        --error-colour-300: 359, 92%, 70%;
+        --error-colour-400: 359, 92%, 60%;
+        --error-colour-500: 359, 92%, 50%;
+        --error-colour-600: 359, 92%, 40%;
+        --error-colour-700: 359, 92%, 30%;
+        --error-colour-800: 359, 92%, 20%;
+        --error-colour-900: 359, 92%, 15%;
+
+        --warning-colour-100: 34, 92%, 90%;
+        --warning-colour-200: 34, 92%, 80%;
+        --warning-colour-300: 34, 92%, 70%;
+        --warning-colour-400: 34, 92%, 60%;
+        --warning-colour-500: 34, 92%, 50%;
+        --warning-colour-600: 34, 92%, 40%;
+        --warning-colour-700: 34, 92%, 30%;
+        --warning-colour-800: 34, 92%, 20%;
+        --warning-colour-900: 34, 92%, 15%;
+
+        --info-colour-100: 211, 92%, 90%;
+        --info-colour-200: 211, 92%, 80%;
+        --info-colour-300: 211, 92%, 70%;
+        --info-colour-400: 211, 92%, 60%;
+        --info-colour-500: 211, 92%, 50%;
+        --info-colour-600: 211, 92%, 40%;
+        --info-colour-700: 211, 92%, 30%;
+        --info-colour-800: 211, 92%, 20%;
+        --info-colour-900: 211, 92%, 15%;
+
+        --background: 57, 100%, 98%;
+        --background-dark: 57, 100%, 90%;
+        --background-darker: 57, 100%, 85%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 222.2 47.4% 11.2%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 222.2 47.4% 11.2%;
+
+        --border: 214.3 31.8% 91.4%;
+
+        --input: 214.3 31.8% 20%;
+
+        --accent: 210 40% 96.1%;
+        --accent-foreground: 222.2 47.4% 11.2%;
+
+        --ring: 215 20.2% 65.1%;
+
+        --radius: 0.5rem;
+    }
+
+    .dark {
+        --background: 57, 100%, 4%;
+
+        --primary-colour-nav: 279, 92%, 20%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+  }
