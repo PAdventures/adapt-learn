@@ -1,6 +1,6 @@
 "use server"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar.tsx";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/shadcn/ui/avatar.tsx";
 import { createClient } from "@/utils/supabase/server.ts";
 import { redirect } from "next/navigation";
 import { DrizzleManager } from "@/classes/DrizzleManagers.ts";

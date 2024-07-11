@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/components/ui/button.tsx"
+import { Button } from "@/components/shadcn/ui/button.tsx"
 import Logout from "@mui/icons-material/Logout"
 import { signOut } from "@/app/dashboard/actions.ts"
 

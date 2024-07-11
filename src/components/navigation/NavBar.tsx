@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/components/ui/button.tsx";
+import { Button } from "@/components/shadcn/ui/button.tsx";
 import { useRouter } from "next/navigation";
 import LinkElements from "@/components/navigation/LinkElements.tsx";
 import AuthButton from "@/components/navigation/AuthButton.tsx";

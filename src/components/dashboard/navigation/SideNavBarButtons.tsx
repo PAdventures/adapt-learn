@@ -1,9 +1,9 @@
 "use client"
 
-import { Button } from "@/components/ui/button.tsx";
+import { Button } from "@/components/shadcn/ui/button.tsx";
 import { Home, AccountCircle } from "@mui/icons-material";
 import { usePathname, useRouter } from "next/navigation";
-import { Separator } from "@/components/ui/separator.tsx";
+import { Separator } from "@/components/shadcn/ui/separator.tsx";
 
 export default function DashboardSideNavBarButtons() {
     const router = useRouter();

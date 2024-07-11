@@ -1,7 +1,7 @@
 "use client"
 
 import DashboardSideNavBarButtons from "@/components/dashboard/navigation/SideNavBarButtons.tsx";
-import { Button } from "@/components/ui/button.tsx";
+import { Button } from "@/components/shadcn/ui/button.tsx";
 import { ExitToApp } from "@mui/icons-material";
 import { useRouter } from "next/navigation";
 

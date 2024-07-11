@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/components/ui/button.tsx";
+import { Button } from "@/components/shadcn/ui/button.tsx";
 import { Google, GitHub } from "@mui/icons-material";
 import { AuthComponentProps } from "@/types/constants.ts";
 import { signupWithOAuth } from "@/app/signup/actions.ts";

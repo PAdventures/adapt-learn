@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/components/ui/button.tsx"
+import { Button } from "@/components/shadcn/ui/button.tsx"
 import { navigationGetButtonText, navigationHandleAuthClick } from "@/app/actions.ts";
 import { useEffect, useState } from "react";
 

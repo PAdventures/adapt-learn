@@ -3,9 +3,9 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form.tsx";
-import { Input } from "@/components/ui/input.tsx";
-import { Button } from "@/components/ui/button.tsx";
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/shadcn/ui/form.tsx";
+import { Input } from "@/components/shadcn/ui/input.tsx";
+import { Button } from "@/components/shadcn/ui/button.tsx";
 import { login } from "@/app/login/actions.ts";
 
 export const loginFormSchema = z.object({

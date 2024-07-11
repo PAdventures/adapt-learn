@@ -1,10 +1,10 @@
 "use client"
 
 import { useRouter } from "next/navigation"
-import { ScrollArea } from "@/components/ui/scroll-area.tsx"
+import { ScrollArea } from "@/components/shadcn/ui/scroll-area.tsx"
 import CloseIcon from '@mui/icons-material/Close';
 import AuthButtons from "@/components/auth/AuthButtons.tsx"
-import { Separator } from "@/components/ui/separator.tsx";
+import { Separator } from "@/components/shadcn/ui/separator.tsx";
 import SigninForm from "@/components/auth/SigninForm.tsx";
 import LoginForm from "@/components/auth/LoginForm.tsx";
 import Link from "next/link";
