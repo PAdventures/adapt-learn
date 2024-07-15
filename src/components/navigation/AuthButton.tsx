@@ -14,7 +14,7 @@ export default function AuthButton() {
         }
 
         updateButtonText()
-    }, [])
+    })
     return (
         <Button onClick={async () => await navigationHandleAuthClick()}>{buttonText}</Button>
     )
