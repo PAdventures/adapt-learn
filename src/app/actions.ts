@@ -16,11 +16,9 @@ export async function navigationHandleAuthClick() {
 
     const { error, data } = await supabase.auth.getUser();
 
-    console.log("Testing")
-
     if (error || !data.user) {
         redirect("/login")
     }
 
-    redirect("/dashboard")
+    redirect("/dashboard/account")
 }
