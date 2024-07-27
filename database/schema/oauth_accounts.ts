@@ -27,5 +27,5 @@ export const oauthAccountRelations = relations(oauthAccounts, ({ one }) => ({
 }))
 
 // Defining the oauth_accounts table types
-export type OAuthAccountType = InferSelectModel<typeof oauthAccounts>;
-export type NewOAuthAccountType = InferInsertModel<typeof oauthAccounts>;
+export type OAuthAccount = InferSelectModel<typeof oauthAccounts>;
+export type NewOAuthAccount = InferInsertModel<typeof oauthAccounts>;

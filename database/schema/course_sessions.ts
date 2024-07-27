@@ -37,8 +37,8 @@ export const courseSessionsRelations = relations(courseSessions, ({ one }) => ({
 }));
 
 // Defining the course table types
-export type CourseSessionType = InferSelectModel<typeof courseSessions>;
-export type NewCourseSessionType = InferInsertModel<typeof courseSessions>;
+export type CourseSession = InferSelectModel<typeof courseSessions>;
+export type NewCourseSession = InferInsertModel<typeof courseSessions>;
 
 export type CourseSessionQuestionsJSONType = {
     questionId: bigint,

@@ -32,5 +32,5 @@ export const teacherToStudentsRelations = relations(teacherToStudents, ({ one })
 }));
 
 // Defining the teacher_to_students table types
-export type TeacherToStudentType = InferSelectModel<typeof teacherToStudents>;
-export type NewTeacherToStudentType = InferInsertModel<typeof teacherToStudents>;
+export type TeacherToStudent = InferSelectModel<typeof teacherToStudents>;
+export type NewTeacherToStudent = InferInsertModel<typeof teacherToStudents>;

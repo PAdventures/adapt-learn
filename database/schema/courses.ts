@@ -9,7 +9,7 @@ import { questions } from "./questions.ts";
 // Defining the courses table
 export const courses = pgTable('courses', {
     courseId: bigserial('course_id', { mode: 'bigint' }).primaryKey(),
-    ownerId: bigint('owner_id', { mode: 'bigint' }).references(() => accounts.accountId),
+    ownerId: bigint('owner_id', { mode: 'bigint' }).references(() => accounts.accountId).notNull(),
     name: varchar('name', { length: 256 }).notNull(),
     descriptionPreview: text('description_preview').notNull(),
     description: text('description').notNull(),
@@ -32,5 +32,5 @@ export const coursesRelations = relations(courses, ({ one, many }) => ({
 }));
 
 // Defining the course table types
-export type CourseType = InferSelectModel<typeof courses>;
-export type NewCourseType = InferInsertModel<typeof courses>;
+export type Course = InferSelectModel<typeof courses>;
+export type NewCourse = InferInsertModel<typeof courses>;

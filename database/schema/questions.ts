@@ -33,5 +33,5 @@ export const questionsRelations = relations(questions, ({ one }) => ({
 }));
 
 // Defining the questions table types
-export type QuestionType = InferSelectModel<typeof questions>;
-export type NewQuestionType = InferInsertModel<typeof questions>;
+export type Question = InferSelectModel<typeof questions>;
+export type NewQuestion = InferInsertModel<typeof questions>;
