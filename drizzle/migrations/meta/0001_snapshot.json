@@ -1,4 +1,6 @@
 {
+  "id": "6b649d9c-b675-40e2-9e77-9978a9409859",
+  "prevId": "ea8bc915-6aa4-4814-8eee-5e2c2c6ad30f",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -63,10 +65,17 @@
       "uniqueConstraints": {
         "accounts_auth_uid_unique": {
           "name": "accounts_auth_uid_unique",
+          "nullsNotDistinct": false,
           "columns": [
             "auth_uid"
-          ],
-          "nullsNotDistinct": false
+          ]
+        },
+        "accounts_username_unique": {
+          "name": "accounts_username_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "username"
+          ]
         }
       }
     },
@@ -120,6 +129,7 @@
       },
       "indexes": {
         "course_sessions_course_id_idx": {
+          "name": "course_sessions_course_id_idx",
           "columns": [
             {
               "expression": "course_id",
@@ -128,13 +138,13 @@
               "nulls": "last"
             }
           ],
-          "with": {},
-          "name": "course_sessions_course_id_idx",
           "isUnique": false,
+          "concurrently": false,
           "method": "btree",
-          "concurrently": false
+          "with": {}
         },
         "course_sessions_account_id_idx": {
+          "name": "course_sessions_account_id_idx",
           "columns": [
             {
               "expression": "account_id",
@@ -143,39 +153,38 @@
               "nulls": "last"
             }
           ],
-          "with": {},
-          "name": "course_sessions_account_id_idx",
           "isUnique": false,
+          "concurrently": false,
           "method": "btree",
-          "concurrently": false
+          "with": {}
         }
       },
       "foreignKeys": {
         "course_sessions_course_id_courses_course_id_fk": {
           "name": "course_sessions_course_id_courses_course_id_fk",
           "tableFrom": "course_sessions",
+          "tableTo": "courses",
           "columnsFrom": [
             "course_id"
           ],
-          "tableTo": "courses",
           "columnsTo": [
             "course_id"
           ],
-          "onUpdate": "no action",
-          "onDelete": "no action"
+          "onDelete": "no action",
+          "onUpdate": "no action"
         },
         "course_sessions_account_id_accounts_account_id_fk": {
           "name": "course_sessions_account_id_accounts_account_id_fk",
           "tableFrom": "course_sessions",
+          "tableTo": "accounts",
           "columnsFrom": [
             "account_id"
           ],
-          "tableTo": "accounts",
           "columnsTo": [
             "account_id"
           ],
-          "onUpdate": "no action",
-          "onDelete": "no action"
+          "onDelete": "no action",
+          "onUpdate": "no action"
         }
       },
       "compositePrimaryKeys": {},
@@ -195,7 +204,7 @@
           "name": "owner_id",
           "type": "bigint",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "name": {
           "name": "name",
@@ -231,6 +240,7 @@
       },
       "indexes": {
         "courses_owner_id_idx": {
+          "name": "courses_owner_id_idx",
           "columns": [
             {
               "expression": "owner_id",
@@ -239,26 +249,25 @@
               "nulls": "last"
             }
           ],
-          "with": {},
-          "name": "courses_owner_id_idx",
           "isUnique": false,
+          "concurrently": false,
           "method": "btree",
-          "concurrently": false
+          "with": {}
         }
       },
       "foreignKeys": {
         "courses_owner_id_accounts_account_id_fk": {
           "name": "courses_owner_id_accounts_account_id_fk",
           "tableFrom": "courses",
+          "tableTo": "accounts",
           "columnsFrom": [
             "owner_id"
           ],
-          "tableTo": "accounts",
           "columnsTo": [
             "account_id"
           ],
-          "onUpdate": "no action",
-          "onDelete": "no action"
+          "onDelete": "no action",
+          "onUpdate": "no action"
         }
       },
       "compositePrimaryKeys": {},
@@ -289,6 +298,7 @@
       },
       "indexes": {
         "oauth_accounts_account_id_idx": {
+          "name": "oauth_accounts_account_id_idx",
           "columns": [
             {
               "expression": "account_id",
@@ -297,26 +307,25 @@
               "nulls": "last"
             }
           ],
-          "with": {},
-          "name": "oauth_accounts_account_id_idx",
           "isUnique": false,
+          "concurrently": false,
           "method": "btree",
-          "concurrently": false
+          "with": {}
         }
       },
       "foreignKeys": {
         "oauth_accounts_account_id_accounts_account_id_fk": {
           "name": "oauth_accounts_account_id_accounts_account_id_fk",
           "tableFrom": "oauth_accounts",
+          "tableTo": "accounts",
           "columnsFrom": [
             "account_id"
           ],
-          "tableTo": "accounts",
           "columnsTo": [
             "account_id"
           ],
-          "onUpdate": "no action",
-          "onDelete": "no action"
+          "onDelete": "no action",
+          "onUpdate": "no action"
         }
       },
       "compositePrimaryKeys": {
@@ -398,6 +407,7 @@
       },
       "indexes": {
         "questions_course_id_idx": {
+          "name": "questions_course_id_idx",
           "columns": [
             {
               "expression": "course_id",
@@ -406,26 +416,25 @@
               "nulls": "last"
             }
           ],
-          "with": {},
-          "name": "questions_course_id_idx",
           "isUnique": false,
+          "concurrently": false,
           "method": "btree",
-          "concurrently": false
+          "with": {}
         }
       },
       "foreignKeys": {
         "questions_course_id_courses_course_id_fk": {
           "name": "questions_course_id_courses_course_id_fk",
           "tableFrom": "questions",
+          "tableTo": "courses",
           "columnsFrom": [
             "course_id"
           ],
-          "tableTo": "courses",
           "columnsTo": [
             "course_id"
           ],
-          "onUpdate": "no action",
-          "onDelete": "no action"
+          "onDelete": "no action",
+          "onUpdate": "no action"
         }
       },
       "compositePrimaryKeys": {},
@@ -450,6 +459,7 @@
       },
       "indexes": {
         "teacher_to_students_student_id_idx": {
+          "name": "teacher_to_students_student_id_idx",
           "columns": [
             {
               "expression": "student_id",
@@ -458,13 +468,13 @@
               "nulls": "last"
             }
           ],
-          "with": {},
-          "name": "teacher_to_students_student_id_idx",
           "isUnique": false,
+          "concurrently": false,
           "method": "btree",
-          "concurrently": false
+          "with": {}
         },
         "teacher_to_students_teacher_id_idx": {
+          "name": "teacher_to_students_teacher_id_idx",
           "columns": [
             {
               "expression": "teacher_id",
@@ -473,39 +483,38 @@
               "nulls": "last"
             }
           ],
-          "with": {},
-          "name": "teacher_to_students_teacher_id_idx",
           "isUnique": false,
+          "concurrently": false,
           "method": "btree",
-          "concurrently": false
+          "with": {}
         }
       },
       "foreignKeys": {
         "teacher_to_students_student_id_accounts_account_id_fk": {
           "name": "teacher_to_students_student_id_accounts_account_id_fk",
           "tableFrom": "teacher_to_students",
+          "tableTo": "accounts",
           "columnsFrom": [
             "student_id"
           ],
-          "tableTo": "accounts",
           "columnsTo": [
             "account_id"
           ],
-          "onUpdate": "no action",
-          "onDelete": "no action"
+          "onDelete": "no action",
+          "onUpdate": "no action"
         },
         "teacher_to_students_teacher_id_accounts_account_id_fk": {
           "name": "teacher_to_students_teacher_id_accounts_account_id_fk",
           "tableFrom": "teacher_to_students",
+          "tableTo": "accounts",
           "columnsFrom": [
             "teacher_id"
           ],
-          "tableTo": "accounts",
           "columnsTo": [
             "account_id"
           ],
-          "onUpdate": "no action",
-          "onDelete": "no action"
+          "onDelete": "no action",
+          "onUpdate": "no action"
         }
       },
       "compositePrimaryKeys": {
@@ -535,10 +544,8 @@
   },
   "schemas": {},
   "_meta": {
+    "columns": {},
     "schemas": {},
-    "tables": {},
-    "columns": {}
-  },
-  "id": "ea8bc915-6aa4-4814-8eee-5e2c2c6ad30f",
-  "prevId": "00000000-0000-0000-0000-000000000000"
+    "tables": {}
+  }
 }
